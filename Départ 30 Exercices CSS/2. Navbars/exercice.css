@@ -1,0 +1,140 @@
+/* Utilisez Flexbox pour résoudre ces problèmes liés aux Navbars. */
+
+/* Nav #1 */
+/* Centrer sur X */
+
+.nav-1{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+
+
+/* Nav #2 */
+/* Centrer sur Y et afficher les boutons à droite */
+
+.nav-2{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* .nav-2 button{
+    position: absolute;
+    cursor: pointer;
+}
+
+.sign-in-btn{
+    right: 200px;
+}
+.sign-up-btn{
+    right: 30px;
+} */
+
+.nav-2 .sign-in-btn{
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+
+
+/* Nav #3 */
+/* Mettre l'icône à gauche et les liens à droite */
+
+.nav-3{
+    display: flex;
+    /* flex-direction: row-reverse; */
+    align-items: center;
+}
+
+/* .nav-3 :nth-child(2){
+    padding-left: 60%; CARREMENT PAS !!! 
+    margin-left: auto;
+} */
+
+/* autre sélecteur funky */
+.nav-3 a:first-of-type{
+    margin-left: auto;
+}
+
+
+
+
+/* Nav #4 */
+/* Mettre l'icône Saturne au milieu et les liens à gauche */
+
+/* .nav-4{
+    display: flex;
+}
+.links-container, .logo-link, .empty-layout{
+    width: 33%;
+    display: flex;
+    align-items: center;
+}
+.nav-4 .logo-link{
+    justify-content: center;
+} */
+
+.nav-4 {
+    display: flex;
+    align-items: center;
+}
+
+.nav-4 .links-container{
+    width: 50%;
+}
+.nav-4 .empty-layout{
+    width: 50%;
+}
+/* 
+    Ca marche parce que par défaut les éléments ont : 
+    flex-grow: 0
+    flex-shrink: 1
+    flex-basis: auto
+    Ce qui veut dire que les éléments occupent la place qui leur est disponible.
+    Ici .links-container et .empty-layout ont la même largeur. Ils se partagent l'espace restant puisque .logo-link a une largeur imposée par la taille de l'image. Ils poussent donc l'image au centre et occupent les bords à taille égale.
+*/
+
+
+
+
+
+
+/* Nav #5 */
+/* Centrer les éléments sur Y */
+/* Mettre les textes au centre sur X */
+/* Afficher la patte de chat à gauche */
+/* Afficher les trois icônes à droite */
+
+.nav-5{
+    display: flex;
+    align-items: center;
+}
+
+/* .nav-5 .logo-link, .nav-5 .container-navlinks, .nav-5 .nav-right{
+    width: 33%;
+}
+
+.nav-5 .logo-link{
+    justify-content: flex-start;
+}
+.nav-5 .nav-right{
+    display: flex;
+    justify-content: flex-end;
+} */
+
+.nav-5 .logo-link{
+    width: 100%;
+}
+.nav-5 .container-navlinks{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.nav-5 .nav-right{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+

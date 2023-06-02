@@ -1,0 +1,63 @@
+*, ::before, ::after {
+    /* box-sizing: border-box; */
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shape{
+    margin: 70px;
+}
+
+.triangle{
+    width: 50px;
+    height: 50px;
+    background: pink;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.heart{
+    width: 50px;
+    height: 50px;
+    background: crimson;
+    transform: rotate(-45deg);
+}
+
+.heart::before{
+    content: "";
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: crimson;
+    transform: translateY(-50%);
+}
+.heart::after{
+    content: "";
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: crimson;
+    transform: translateX(50%) translateY(-100%);
+}
+
+.egg{
+    /* width: 100px;
+    height: 100px;
+    clip-path: polygon(50% 0%, 100% 35%, 50% 100%, 0 35%);
+    background: purple;
+    margin-top: 100px;
+    border-radius: 50%; */
+    width: 140px;
+    height: 180px;
+    background: slateblue;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
